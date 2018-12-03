@@ -1,0 +1,14 @@
+<h1>Donations</h1>
+
+<% @donations.each do |donation| %>
+  <p><%= donation.item_name %></p>
+
+  <% if donation.item_photo.attached? %>
+    <p>
+      <%=image_tag donation.item_photo.variant('250x250!')%>
+    </p>
+  <% end %>
+
+  <p><%= donation.item_description %></p>
+
+  <% end %>
