@@ -1,0 +1,22 @@
+<h1>Showing donation item list.</h1>
+
+<p>
+  <h6>Item Name</h6>
+  <%= @donation.item_name %>  
+</p>
+<br>
+<p>
+  <h6>Item Photo</h6>
+  <% if @donation.item_photo.attached? %>
+  <%= image_tag @donation.item_photo %>
+  <% end %>
+</p>
+<br>
+<p>
+  <h6>Item Description</h6>
+  <%= @donation.item_description %>
+</p>
+
+<%= link_to 'Home', donations_path %>
+<%= link_to 'Edit', edit_donation_path(@donation) %>
+<%= link_to 'Delete', donation_path(@donation), method: :delete, data: { confirm: "Are you sure you want to delete this item?"} %>

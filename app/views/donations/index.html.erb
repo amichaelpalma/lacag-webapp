@@ -1,14 +1,44 @@
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-heading"><h1>Donations</h1>
+      <div class="panel-body">
+        <% @donations.each do |donation| %>
+        <p><%= donation.item_name %></p>
+        <br>
+        <% if donation.item_photo.attached?%>
+        <p><%= image_tag donation.item_photo.variant(resize: '100x100!') %></p>
+        <% else %>
+        <p>No Photo Attached</p>
+        <% end %>
+        <br>
+        <p><%= donation.item_description %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <h1>Donations</h1>
 
+
 <% @donations.each do |donation| %>
-  <p><%= donation.item_name %></p>
+<p><%= donation.item_name %></p>
 
-  <% if donation.item_photo.attached? %>
-    <p>
-      <%=image_tag donation.item_photo.variant('250x250!')%>
-    </p>
-  <% end %>
+<% if donation.item_photo.attached? %>
+<p>
+<%= image_tag donation.item_photo.variant(resize: '250x250!')%>
+</p>
+<% end %>
 
-  <p><%= donation.item_description %></p>
+<p><%= donation.item_description %></p>
 
-  <% end %>
+<p>
+<%= link_to 'Home', donations_path %>
+<%= link_to 'Show', donation_path(donation) %>
+</p>
+
+<% end %>
