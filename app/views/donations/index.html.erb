@@ -18,28 +18,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-<h1>Donations</h1>
-
-
-<% @donations.each do |donation| %>
-<p><%= donation.item_name %></p>
-
-<% if donation.item_photo.attached? %>
-<p>
-<%= image_tag donation.item_photo.variant(resize: '250x250!')%>
-</p>
-<% end %>
-
-<p><%= donation.item_description %></p>
-
-<p>
-<%= link_to 'Home', donations_path %>
-<%= link_to 'Show', donation_path(donation) %>
-</p>
-
-<% end %>
