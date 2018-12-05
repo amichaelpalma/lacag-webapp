@@ -1,0 +1,31 @@
+<h1 class="text-center">ADD A NEW USER</h1>
+
+<%= form_for @user do |f| %>
+
+  <div class="text-center user_form">
+  <p>
+   <%= f.label :username, 'USERNAME' %> <br>
+   <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <%= f.label :first_name, 'FIRST NAME' %> <br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name, 'LAST NAME' %> <br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :email, 'EMAIL ADDRESS' %> <br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.submit 'Sign up' %>
+  </p>
+  </div>
+
+<% end %>
