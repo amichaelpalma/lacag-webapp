@@ -1,0 +1,27 @@
+<h1 class="text-center mt-3 mb-1">LOG IN</h1>
+
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+<div class="text-center mb-3">
+  <%= flash[:danger] %>
+</div>
+
+<div class="text-center user_form">
+
+  <p>
+  <%= f.label :email, 'EMAIL' %> <br>
+  <%= f.email_field :email , placeholder: "email@domain.com"%>
+  </p>
+
+  <p>
+  <%= f.label :password, 'PASSWORD' %> <br>
+  <%= f.password_field :password, placeholder: "********" %>
+  </p>
+
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+
+</div>
+
+<% end %>
