@@ -1,9 +1,17 @@
 <hr>
 <footer class="page-footer font-small blue">
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3"> <%= link_to 'Employee & Admin Login', donations_path %> | © 2018 Law Abiding Citizen Alliance Group. All Rights Reserved. 
+  <% if current_user %>
+    <div class="footer-copyright text-center py-3">Logged in as: <span class="font-weight-bold"> <%= current_user.username %> </span> | © 2018 Law Abiding Citizen Alliance Group. All Rights Reserved. 
     <p> 
       web app & design by: <%= link_to 'ampcodes', donations_path %>
     </p> 
+    </div>
+  <% else %>
+  <div class="footer-copyright text-center py-3"> <%= link_to 'Employee & Admin Login', login_path %> | © 2018 Law Abiding Citizen Alliance Group. All Rights Reserved. </div>
+    <p> 
+      web app & design by: <%= link_to 'ampcodes', donations_path %>
+    </p> 
+    <% end %>
   </div> 
 </footer>
