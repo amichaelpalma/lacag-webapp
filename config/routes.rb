@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # Pages
+  root 'pages#home'
+
   # Root
   root 'donations#index'
 
