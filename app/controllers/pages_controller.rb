@@ -6,4 +6,7 @@ class PagesController < ApplicationController
     # Donations
     @donations = Donation.with_attached_item_photo
   end
+
+  def about
+  end
 end
