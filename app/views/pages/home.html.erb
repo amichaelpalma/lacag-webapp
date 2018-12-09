@@ -1,7 +1,99 @@
-<h1>This is the home page.</h1>
+<div class="container-fluid"> <!-- main container -->
 
-<% @users.each do |user| %>
+  <!-- LACAG Header -->
+<!--   <div class="org-header mt-2 text-center pb-4 pt-4 text-white">
+    <h1>
+      LAW ABIDING CITIZENS ALLIANCE GROUP (LACAG) INC.
+    </h1>
+  </div>
+ -->  <!-- LACAG Header //end -->
 
-  <%= user.first_name %>
+  <!-- First Row #SHOWCASE and #EVENTS -->
+    <div class="row row-eq-height justify-content-between">
 
-  <% end %>
+      <div class="col-sm-8 mt-4">
+        <div class="col-sm-12 text-center left-col-showcase">
+          THIS AREA WILL SHOWCASE A CAROUSEL ABOUT THE ORGANISATION
+        </div>
+      </div>
+
+      <div class="col-sm-4 mt-4">
+        <div class="col-sm-12 text-center right-col-events">
+          THIS AREA WILL POST EVENTS AND DATES OF EVENTS.
+          IT WILL ALSO SHOWCASE PICTURES OF EVENTS AND ONCE CLICKED, WILL REDIRECT A NON-USER TO THE EVENTS_PATH WHERE THEY CAN SEE THE DETAILS OF THE EVENTS (Event Name, What's it for, Photo of the Event, Attendees and a whole lot more.)
+        </div>
+      </div>
+
+    </div>
+    <!-- First Row #SHOWCASE and #EVENTS //end -->
+
+    <!-- Second Row #DONATIONS -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 mt-4 donations-showpage">
+
+          <h3>We are in need of the following items:</h3>
+
+          <% @donations.each do |donation| %>
+          
+          <ul class="list-inline">
+            <!-- Item Name -->
+            <li class="list-inline-item">
+              <%= donation.item_name %>  
+            </li>
+
+            <!-- Item Photo -->
+            <% if donation.item_photo.attached? %>
+            <li class="list-inline">
+              <%= image_tag donation.item_photo.variant(resize: '150x150!') %>
+            </li>
+            <% else %>
+            <li class="list-inline"> No photo attached</li>
+            <% end %>
+
+            <!-- Item Description -->
+            <li class="list-inline">
+              <%= donation.item_description %>
+            </li>
+          </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner text-center" style="max-height: 20%; max-width: 30%">
+    <div class="carousel-item active">
+      <%= image_tag "LACAGTarp.jpg", style: "max-width: 200px;" %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "LACAG Logo.png", style: "max-width: 200px;" %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "LACAGTarp.jpg", style: "max-width: 200px; max-heigh: 20%;" %>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+    </div>
+
+
+</div> <!-- end of main container -->
