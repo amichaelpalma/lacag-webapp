@@ -24,7 +24,12 @@
         <p><%= donation.item_description %></p>
       </div>
       <% end %>
-      <%= link_to 'New Donation Item', new_donation_path %>
+
+      <% if current_user %>
+        <%= link_to 'New Donation Item', new_donation_path %>
+      <% else %>
+        
+      <% end %>
     </div>
   </div>
 </div>
