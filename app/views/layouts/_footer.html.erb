@@ -1,7 +1,37 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <hr>
-<footer class="page-footer font-small blue">
-  <!-- Copyright -->
-  <% if current_user %>
+<footer>
+
+  <div class="row">
+    
+    <div class="col col-sm-3 text-center">
+     <%= image_tag 'LACAG Logo.png', alt: 'LACAG Logo', id: 'footerlogo' %>
+    </div>
+
+    <div class="col col-sm-3">
+      <h3>Address</h3>
+      <p>#21 Hercules Street Airmens Village Pulang Lupa Dos, Las Pinas City</p>
+    </div>
+
+    <div class="col col-sm-3">
+      <h3>Contact Details</h3>
+      <p>
+        Email: lacagspecialagent@gmail.com <br>
+        Phone: +63 909 615-3296/+63 977 108-1625
+      </p>
+    </div>
+
+    <div class="col col-sm-3">
+      <h3>Links</h3>
+      <button type="button" class="btn btn-fb btn-primary"><i class="fa fa-facebook pr-1"></i> Facebook</button>
+
+
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <% if current_user %>
     <div class="footer-copyright text-center py-3">Logged in as: <span class="font-weight-bold"> <%= current_user.username %> </span> | © 2018 Law Abiding Citizen Alliance Group. All Rights Reserved. 
     <p> 
       web app & design by: <%= link_to 'ampcodes', donations_path %>
@@ -13,5 +43,8 @@
       web app & design by: <%= link_to 'ampcodes', "https://amichaelpalma.github.io/", target: '_blank', rel: 'nofollow' %>
     </p> 
     <% end %>
-  </div> 
+    </p> 
+    </div>
+  </div>
 </footer>
+
