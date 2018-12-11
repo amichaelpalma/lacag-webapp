@@ -1,35 +1,39 @@
 <div class="container"> <!-- main container -->
-  
-</div> <!-- end of main container -->
+  <div class="row justify-content-center">
+        <div class="col-sm-12 donations-showpage">
+            
+            <!-- Donation Card --START-- -->
+            
+            <div class="container py-4">
+              <div class="row">
+                <% @donations.each do |donation| %>
+                <div class="col col-sm-4 d-flex align-items-stretch pb-4">
+                  <div class="card border-secondary">
+                    <div class="card-header text-center">
+                      <h5><%= donation.item_name %></h5>
+                    </div>
+                      <div class="card-body">
+                        <% if donation.item_photo.attached? %>
+                        <p class="text-center"> <%= image_tag donation.item_photo.variant(resize: '200x150!') %> </p>
+                        <% else %>
+                        <p class="nophoto text-center" style="height: 150px;">No Photo Attached</p>
+                        <% end %>
 
+                        <p class="card-text">
+                          <%= donation.item_description %>
+                        </p>
+                      </div>
+                      <div class="card-footer bg-transparent text-center">
+                        <%= link_to 'Edit', donation_path(donation), class: 'btn btn-primary' %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
 
-
-
-
-
-
-<div class="container">
-  <div class="panel panel-info">
-    <div class="panel-heading"><h1>Donations</h1>
-      <div class="panel-body">
-        <% @donations.each do |donation| %>
-        <p><%= donation.item_name %></p>
-        <br>
-        <% if donation.item_photo.attached?%>
-        <p><%= image_tag donation.item_photo.variant(resize: '100x100!') %></p>
-        <% else %>
-        <p>No Photo Attached</p>
-        <% end %>
-        <br>
-        <p><%= donation.item_description %></p>
+            <!-- Donation Card --END-- -->
+        </div>
       </div>
-      <% end %>
-
-      <% if current_user %>
-        <%= link_to 'New Donation Item', new_donation_path %>
-      <% else %>
-        
-      <% end %>
     </div>
-  </div>
-</div>
+  

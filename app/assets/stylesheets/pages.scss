@@ -6,9 +6,9 @@
   border: 1px solid gray;
 }
 
-.donations-showpage {
-  border: 1px solid blue;
-}
+// .donations-showpage {
+//   border: 1px solid black;
+// }
 
 .container .header-container {
   overflow: auto;
@@ -33,3 +33,6 @@
 
 }
 
+.card {
+ flex: 0 0 100%; 
+}
