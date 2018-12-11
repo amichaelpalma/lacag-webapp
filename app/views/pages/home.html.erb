@@ -27,39 +27,43 @@
     </div>
     <!-- First Row #SHOWCASE and #EVENTS //end -->
 
-    <!-- Second Row #DONATIONS -->
-    <div class="container-fluid">
+    <!-- Second Row #DONATIONS --START-- -->
+    <div class="container-fluid mb-4">
       <div class="row">
         <div class="col-sm-12 mt-4 donations-showpage">
+            
+            <!-- Donation Card --START-- -->
+            
+            <div class="container">
+              <div class="row">
+                <% @donations.each do |donation| %>
+                <div class="col col-sm-4 d-flex align-items-stretch">
+                  <div class="card text-white bg-primary">
+                    <div class="card-header text-center">
+                      <h5><%= donation.item_name %></h5>
+                    </div>
+                      <div class="card-body">
+                        <% if donation.item_photo.attached? %>
+                        <p> <%= image_tag donation.item_photo.variant(resize: '200x150!') %> </p>
+                        <% else %>
+                        <p>No Photo Attached</p>
+                        <% end %>
 
-          <h3>We are in need of the following items:</h3>
+                        <p class="card-text">
+                          <%= donation.item_description %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
 
-          <% @donations.each do |donation| %>
-          
-          <ul class="list-inline">
-            <!-- Item Name -->
-            <li class="list-inline-item">
-              <%= donation.item_name %>  
-            </li>
-
-            <!-- Item Photo -->
-            <% if donation.item_photo.attached? %>
-            <li class="list-inline">
-              <%= image_tag donation.item_photo.variant(resize: '150x150!') %>
-            </li>
-            <% else %>
-            <li class="list-inline"> No photo attached</li>
-            <% end %>
-
-            <!-- Item Description -->
-            <li class="list-inline">
-              <%= donation.item_description %>
-            </li>
-          </ul>
-          <% end %>
+            <!-- Donation Card --END-- -->
         </div>
       </div>
     </div>
+    <!-- Second Row #DONATIONS --END-- -->
 
     <div class="container">
       <div id="demo" class="carousel slide" data-ride="carousel">
