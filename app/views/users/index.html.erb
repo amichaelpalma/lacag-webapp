@@ -10,7 +10,6 @@
     <tr>
       <th scope="col">No.</th>
       <th scope="col">Name</th>
-      <th scope="col">Email Address</th>
       <th scope="col">Username</th>
       <th scope="col">Options</th>
     </tr>
@@ -23,7 +22,6 @@
       <td>
         <%= link_to user.full_name, user_path(user) %> 
       </td>
-      <td><%= user.email %></td>
       <td><%= user.username %></td>
       <td>
         <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-outline-primary btn-sm' %> 

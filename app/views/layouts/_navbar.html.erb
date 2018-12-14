@@ -21,7 +21,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-          <%= link_to 'Volunteer', seminarsandtrainings_path, class: 'dropdown-item' %>
+          <%= link_to 'Volunteer', new_volunteer_path, class: 'dropdown-item' %>
 
           <%= link_to 'Seminar', seminarsandtrainings_path, class: 'dropdown-item' %>
 
@@ -43,6 +43,8 @@
 
       <% if current_user %>
       <%= link_to 'Log Out', logout_path, method: :delete, class: 'nav-link btn btn-outline-light my-2 my-sm-0 ml-2' %>
+
+      <%= link_to 'Volunteer List', volunteers_path, class: 'nav-link btn btn-outline-light my-2 my-sm-0 ml-2' %> 
       <% end %>
 
       <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" 

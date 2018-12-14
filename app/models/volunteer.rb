@@ -1,0 +1,5 @@
+class Volunteer < ApplicationRecord
+
+
+
+end

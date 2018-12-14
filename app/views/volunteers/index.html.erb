@@ -1,0 +1,39 @@
+<h1>This page is only available for ADMINS.</h1>
+<br>
+<h1>All Available Volunteers</h1>
+
+
+
+<table class="table-responsive">
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Cellphone Number</th>
+        <th scope="col">Alternate Phone Number</th>
+        <th scope="col">Location</th>
+        <th scope="col">Options</th>
+
+      </tr>
+    </thead>
+    <% @volunteers.each do |volunteer| %>
+    <tbody>
+      <tr>
+        <th scope="row"><%= volunteer.id %></th>
+        <td><%= volunteer.full_name %></td>
+        <td><%= volunteer.email %></td>
+        <td><%= volunteer.cp_number %></td>
+        <td><%= volunteer.alt_cp_number %></td>
+        <td><%= volunteer.location %></td>
+        <td>
+          <%= link_to 'Edit', edit_volunteer_path(volunteer), class: 'btn btn-outline-primary btn-sm' %>
+
+          <%= link_to 'Delete', volunteer_path(volunteer), method: :delete,data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-primary btn-sm' %> </td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</table>

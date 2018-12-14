@@ -1,0 +1,44 @@
+
+
+<%= form_for @volunteer do |f| %>
+
+
+<div class="text-center user_form text-white">
+
+<p>
+  <%= f.label :first_name, 'FIRST NAME' %> <br>
+  <%= f.text_field :first_name %>
+</p>
+
+<p>
+  <%= f.label :last_name, 'LAST NAME' %>  <br>
+  <%= f.text_field :last_name %>
+</p>
+
+<p>
+  <%= f.label :email, 'EMAIL ADDRESS' %> <br>
+  <%= f.text_field :email %>
+</p>
+
+<p>
+  <%= f.label :cp_number, 'CELLPHONE NUMBER' %> <br>
+  <%= f.text_field :cp_number %>
+</p>
+
+<p>
+  <%= f.label :alt_cp_number, 'ALTERNATE CELLPHONE NUMBER' %> <br>
+  <%= f.text_field :alt_cp_number %>
+</p>
+
+<p>
+  <%= f.label :location, 'LOCATION' %> <br>
+  <%= f.text_field :location %>
+</p>
+
+<p><%= f.submit :Volunteer, class: 'btn btn-white' %></p>
+
+</div>
+
+
+
+<% end %>
