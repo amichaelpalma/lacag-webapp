@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   # Pages
-  root 'pages#home'
   get '/about', to: "pages#about"
   get '/seminarsandtrainings', to: "pages#seminarsandtrainings"
 
   # Root
-  root 'donations#index'
+  root 'pages#home'
 
   # Donations
   resources 'donations'
@@ -18,6 +17,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  # Volunteers
+  resources 'volunteers'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
