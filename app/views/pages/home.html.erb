@@ -54,9 +54,14 @@
       <div class="col-sm-4 mt-4">
         <h1>Events</h1>
         <hr style="border: 1px solid blue">
-        <div class="col-sm-12 text-center right-col-events">
-          THIS AREA WILL POST EVENTS AND DATES OF EVENTS.
-          IT WILL ALSO SHOWCASE PICTURES OF EVENTS AND ONCE CLICKED, WILL REDIRECT A NON-USER TO THE EVENTS_PATH WHERE THEY CAN SEE THE DETAILS OF THE EVENTS (Event Name, What's it for, Photo of the Event, Attendees and a whole lot more.)
+        <div class="col-sm-12 right-col-events">
+            
+          <% @events.each do |event| %>
+
+
+          <h6><%= event.title %></h6>
+
+          <% end %>
         </div>
       </div>
     </div>
