@@ -13,6 +13,9 @@
 
       <div class="col-sm-8 mt-4">
         <h1>LACAG at a Glance</h1>
+          <% if current_user %>
+            <%= link_to 'Volunteer List', volunteers_path, class: 'btn btn-outline-info' %>
+          <% end %>
         <hr style="border: 1px solid blue">
         <div class="col-sm-12 text-center left-col-showcase">
               <div class="container">
@@ -53,6 +56,15 @@
 
       <div class="col-sm-4 mt-4">
         <h1>Events</h1>
+
+        <% if current_user %>
+          
+          <%= link_to 'New Event Item', new_event_path, class: 'btn btn-outline-info' %>
+
+        <% end %> 
+
+
+
         <hr style="border: 1px solid blue">
         <div class="col-sm-12 right-col-events">
             
@@ -74,6 +86,16 @@
     <!-- Second Row #DONATIONS --START-- -->
     <div class="container-fluid mt-4">
       <h1>Donate and Volunteer</h1>
+
+      <!-- Show NAV if logged in -->
+      
+      <% if current_user %>
+        <%= link_to 'New Donation Item', new_donation_path, class: 'btn btn-outline-info' %>
+
+      <% end %>
+
+
+
       <hr style="border: 1px solid blue">
       <div class="row">
         <div class="col-sm-12 donations-showpage">
