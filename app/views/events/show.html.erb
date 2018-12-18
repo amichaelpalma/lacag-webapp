@@ -3,3 +3,14 @@
 <p class="btn btn-outline-primary btn-sm"><%= @event.tag %></p>
 <hr style="border: 1px solid blue">
 <p><%= @event.details %></p>
+
+<div>
+  <% if @event.event_images.attached? %>
+  <p class="text-center px-2">
+    <strong>Images</strong> <br>
+    <% @event.event_images.each do |image| %>
+      <%= image_tag image.variant(resize: '200x200!'), class: 'img-thumbnail' %>
+    <% end %>
+  </p>
+  <% end %>
+</div>
