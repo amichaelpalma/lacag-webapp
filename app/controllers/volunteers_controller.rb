@@ -15,7 +15,7 @@ class VolunteersController < ApplicationController
     if @volunteer.save
       flash[:success] = 'You have successfully signed up to volunteer. Please wait for our call to confirm your availabilty.
                         We appreciate your efforts.'
-      redirect_to volunteer_path(@volunteer)
+      redirect_to volunteers_path(@volunteer)
     else
       render 'new'
     end
