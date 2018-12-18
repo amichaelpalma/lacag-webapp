@@ -13,6 +13,11 @@
 </p>
 
 <p>
+  <%= f.label :event_images, 'Images' %> <br>
+  <%= f.file_field :event_images, multiple: true %>
+</p>
+
+<p>
   <%= f.label :tag %> <br>
   <%= f.text_field :tag %>
 </p>
@@ -21,6 +26,7 @@
   <%= f.label :details %> <br>
   <%= f.text_area :details %>
 </p>
+
 
 <p>
   <%= f.submit %>

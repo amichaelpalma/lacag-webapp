@@ -66,12 +66,18 @@
 
 
         <hr style="border: 1px solid blue">
-        <div class="col-sm-12 right-col-events">
+        <div class="col-sm-12 right-col-events pt-2">
             
           <% @events.each do |event| %>
 
+          <h6>
+            <%= link_to event.title, event_path(event) %>
+          </h6>
 
-          <h6><%= event.title %></h6>
+          <p class="small">
+            <%= event.subtitle %>
+          </p>
+
 
           <% end %>
         </div>
