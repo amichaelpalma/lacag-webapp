@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :set_events, only: [:edit, :update, :show, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.with_attached_event_images
   end
 
   def new

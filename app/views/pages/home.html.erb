@@ -80,6 +80,15 @@
             <%= event.subtitle %>
           </p>
 
+          <% if event.event_images.attached? %>
+          <p>
+          <strong class="small">Images</strong> <br>
+          <% event.event_images.each do |image| %>
+          <%= image_tag image.variant(resize: '35x35!'), class: 'img-thumbnail' %>
+          <% end %>
+          </p>
+          <% end %>
+
 
           <% end %>
         </div>

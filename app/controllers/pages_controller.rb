@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     # Donations
     @donations = Donation.with_attached_item_photo
     # Events
-    @events = Event.all
+    @events = Event.with_attached_event_images
   end
 
   def about
