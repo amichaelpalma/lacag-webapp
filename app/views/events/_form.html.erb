@@ -4,12 +4,12 @@
 
 <p>
   <%= f.label :title %> <br>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, style: 'width: 50%;' %>
 </p>
 
 <p>
-  <%= f.label :subtitle %> <br>
-  <%= f.text_field :subtitle %>
+  <%= f.label :subtitle, 'Event Details' %> <br>
+  <%= f.text_field :subtitle, style: 'width: 50%;  height: 50px' %>
 </p>
 
 <p>
@@ -19,17 +19,18 @@
 
 <p>
   <%= f.label :tag %> <br>
-  <%= f.text_field :tag %>
+  <%= f.text_field :tag, style: 'width: 50%;' %>
 </p>
 
 <p>
-  <%= f.label :details %> <br>
-  <%= f.text_area :details %>
+  <%= f.label :details, 'Event Story' %> <br>
+  <%= f.text_area :details, style: 'width: 50%; height: 200px;' %>
 </p>
 
 
 <p>
-  <%= f.submit %>
+  <%= f.submit 'Submit'%>
+  <%= link_to 'Back', event_path(@event) %>
 </p>
 
 

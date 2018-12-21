@@ -1,18 +1,20 @@
 <%= form_for @donation, local:true do |f| %>
 
+
+<div>
 <p>
-  <%= f.label :item_name %>:
-  <%= f.text_field :item_name, :size => 65 %>
+  <%= f.label :item_name, 'Item Name' %> <br>
+  <%= f.text_field :item_name, style: 'width: 50%;' %>
 </p>
 
 <p>
-  <%= f.label :item_photo %>: <br>
+  <%= f.label :item_photo, 'Item Photo' %> <br>
   <%= f.file_field :item_photo %>
 </p>
 
 <p>
-  <%= f.label :item_description %>: <br>
-  <%= f.text_area :item_description %>
+  <%= f.label :item_description, 'Item Description' %> <br>
+  <%= f.text_area :item_description, style: 'width: 50%; height: 200px' %>
 </p>
 
 <p>
@@ -21,3 +23,4 @@
 
 
 <% end %>
+</div>

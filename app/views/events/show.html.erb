@@ -14,8 +14,14 @@
   </p>
   <% end %>
 
+  <div class="text-center">
+    <%= link_to 'Back', events_path, class: 'btn btn-outline-primary' %>
+    <%= link_to 'Delete', event_path(@event), method: :delete, data: { confirm: 'Are you sure'}, class: 'btn btn-outline-primary' %>
+    <%= link_to 'Edit', edit_event_path(@event), class: 'btn btn-outline-primary' %>
+  </div>
 
-  <div>
+
+  <div class="mt-4">
     <h4>Future possible update:</h4>
     <p>On .hover, photo will enlarge (lightbox)</p>
   </div>

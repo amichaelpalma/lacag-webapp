@@ -1,6 +1,9 @@
 <div class="text-center"> 
   <h1>Events Page</h1> 
+
+  <% if current_user %>
   <p><%= link_to 'New Event', new_event_path, class: 'btn btn-outline-primary' %>
+  <% end %>
   </p>
 </div>
 <br>
@@ -8,8 +11,11 @@
 
 <% @events.each do |event| %>
 
-<div class="border px-2 pb-2 mb-2">
-<h1><%= event.title %></h1>
+<div class="border px-2 py-2 mb-3">
+
+  <% if current_user %>
+<h2><%= link_to event.title, event_path(event) %></h2>
+  <% end %>
 <h4><%= event.subtitle %></h4>
 <p class="btn btn-sm btn-success"><%= event.tag %></p>
 <hr style="border: 1px solid blue;">
@@ -24,11 +30,6 @@
     <% end %>
   </p>
   <% end %>
-</div>
-
-<div class="text-right">
-  <%= link_to 'Edit', edit_event_path(event), class: 'btn btn-outline-primary' %>
-  <%= link_to 'Show', event_path(event), class: 'btn btn-outline-primary' %>
 </div>
 </div>
 
