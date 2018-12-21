@@ -4,6 +4,7 @@
 
 .right-col-events {
   border: 1px solid gray;
+  max-height: 640px;
 }
 
 // .donations-showpage {
@@ -35,4 +36,9 @@
 
 .card {
  flex: 0 0 100%; 
+}
+
+.carousel-item .carimg {
+  max-height: 640px;
+  min-width: auto;
 }
