@@ -1,5 +1,7 @@
 class VolunteersController < ApplicationController
 
+  before_action :authorize, only: [:edit, :destroy, :index, :show]
+
   before_action :set_volunteer, only: [:edit, :update, :show, :destroy]
 
   def index
@@ -15,7 +17,7 @@ class VolunteersController < ApplicationController
     if @volunteer.save
       flash[:success] = 'You have successfully signed up to volunteer. Please wait for our call to confirm your availabilty.
                         We appreciate your efforts.'
-      redirect_to volunteers_path(@volunteer)
+      redirect_to root_path
     else
       render 'new'
     end

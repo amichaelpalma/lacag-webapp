@@ -1,5 +1,9 @@
+<div>
+
 <% flash.each do |name, msg| %>
-  <ul>
-    <li><%= msg %></li>
+  <ul style="display: inline-block; padding-left: 0; width: 100%" class="text-center">
+    <li style="list-style: none;" class="alert alert-primary"><%= msg %></li>
   </ul>
 <% end %>
+
+</div>

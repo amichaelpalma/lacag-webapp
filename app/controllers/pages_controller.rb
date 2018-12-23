@@ -15,5 +15,8 @@ class PagesController < ApplicationController
   def seminarsandtrainings
   end
 
+  def secret
+  end
+
 
 end

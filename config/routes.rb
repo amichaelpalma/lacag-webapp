@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # Pages
   get '/about', to: "pages#about"
   get '/seminarsandtrainings', to: "pages#seminarsandtrainings"
+  get '/secret', to: "pages#secret"
 
   # Root
   root 'pages#home'

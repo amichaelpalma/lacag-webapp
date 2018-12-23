@@ -1,10 +1,13 @@
 .left-col-showcase {
   border: 1px solid gray;
+  height: 640px;
 }
 
 .right-col-events {
   border: 1px solid gray;
-  max-height: 640px;
+  height: 640px;
+  overflow: auto;  
+
 }
 
 // .donations-showpage {
@@ -39,6 +42,6 @@
 }
 
 .carousel-item .carimg {
-  max-height: 640px;
+  max-height: 600px;
   min-width: auto;
 }
