@@ -1,11 +1,17 @@
 class UsersController < ApplicationController
 
+  before_action :authorize, only: [ :index, :new, :edit, :show, :update, :destroy, :show]
+
   def index
     @users = User.all
   end
 
   def new
     @user = User.new
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def create

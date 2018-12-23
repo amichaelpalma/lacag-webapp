@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
 
-  before_action :authorize, only: [:new, :update, :delete, :edit]
+  before_action :authorize, only: [:new, :update, :destroy, :edit]
 
 
   before_action :set_donation, only: [:edit, :update, :show, :destroy]

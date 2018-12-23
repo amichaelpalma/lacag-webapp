@@ -1,0 +1,20 @@
+<div class="text-center">
+  
+  <h1><%= @donation.item_name %></h1>
+
+  <% if @donation.item_photo.attached? %>
+  <p><%= image_tag @donation.item_photo.variant(resize: '400x400!') %> </p>
+
+  <% else %>
+
+  <p class="nophoto" style="height: 400px; background: grey">No Photo Attached</p>
+
+  <% end %>
+
+  <p><%= @donation.item_description %></p>
+
+  <div>
+    <%= link_to 'Donate', root_path, class: 'btn btn-primary' %>
+  </div>
+
+</div>
