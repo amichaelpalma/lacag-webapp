@@ -1,5 +1,3 @@
-
-
 <%= form_for @volunteer do |f| %>
 
 
@@ -7,35 +5,35 @@
 
 <p>
   <%= f.label :first_name, 'FIRST NAME' %> <br>
-  <%= f.text_field :first_name %>
+  <%= f.text_field :first_name, size: 50 %>
 </p>
 
 <p>
   <%= f.label :last_name, 'LAST NAME' %>  <br>
-  <%= f.text_field :last_name %>
+  <%= f.text_field :last_name, size: 50 %>
 </p>
 
 <p>
   <%= f.label :email, 'EMAIL ADDRESS' %> <br>
-  <%= f.text_field :email %>
+  <%= f.text_field :email, size: 50 %>
 </p>
 
 <p>
   <%= f.label :cp_number, 'CELLPHONE NUMBER' %> <br>
-  <%= f.text_field :cp_number %>
+  <%= f.text_field :cp_number, size: 50 %>
 </p>
 
 <p>
   <%= f.label :alt_cp_number, 'ALTERNATE CELLPHONE NUMBER' %> <br>
-  <%= f.text_field :alt_cp_number %>
+  <%= f.text_field :alt_cp_number, size: 50 %>
 </p>
 
 <p>
   <%= f.label :location, 'LOCATION' %> <br>
-  <%= f.text_field :location %>
+  <%= f.text_field :location, size: 50 %>
 </p>
 
-<p><%= f.submit :Volunteer, class: 'btn btn-white' %></p>
+<p><%= f.submit :Volunteer, class: 'btn' %></p>
 
 </div>
 

@@ -1,36 +1,36 @@
 <h1 class="text-center">ADD A NEW USER</h1>
 
 <%= form_for @user do |f| %>
-
+  <br>
   <div class="text-center user_form">
   <p>
    <%= f.label :username, 'USERNAME' %> <br>
-   <%= f.text_field :username %>
+   <%= f.text_field :username, size: 50 %>
   </p>
 
   <p>
     <%= f.label :first_name, 'FIRST NAME' %> <br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, size: 50 %>
   </p>
 
   <p>
     <%= f.label :last_name, 'LAST NAME' %> <br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, size: 50 %>
   </p>
 
   <p>
     <%= f.label :email, 'EMAIL ADDRESS' %> <br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, size: 50 %>
   </p>
 
   <p>
     <%= f.label :password, 'PASSWORD' %> <br>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, size: 50 %>
   </p>
 
   <p>
     <%= f.label :password_confirmation, "CONFIRM PASSWORD" %> <br>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, size: 50 %>
   </p>
 
   <p>

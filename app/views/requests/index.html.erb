@@ -1,0 +1,54 @@
+<h1>Showing Seminars and Training Requests</h1>
+
+
+<table class="table-responsive">
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Date Request Sent</th>
+
+        <% if current_user %>
+
+        <th scope="col">Email</th>
+        <th scope="col">Cellphone Number</th>
+        <th scope="col">Sent</th>
+        <th scope="col">Options</th>
+
+        <% end %>
+
+      </tr>
+    </thead>
+
+    <% @requests.order("created_at DESC").each do |request| %>
+    <tbody>
+      <tr>
+        <th scope="row"><%= request.id %></th>
+        <td><%= request.full_name %></td>
+
+        <td><%= request.location %></td>
+        <td><%= request.created_at.to_formatted_s(:long) %></td>
+
+
+        <% if current_user %>
+        <td><%= mail_to request.email %></td>
+        <td><%= request.cp_number %></td>
+
+        <td><%= request.sent %> </td>
+        <td> <%= link_to 'Update', edit_request_path(request), class: 'btn btn-outline-primary' %> </td>
+        <% end %>
+
+<!--         <td>
+          <%= link_to 'Edit', root_path, class: 'btn btn-outline-primary btn-sm' %>
+
+          <%= link_to 'Delete', request_path(request), method: :delete,data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-primary btn-sm' %> 
+        </td> -->
+
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</table>

@@ -23,14 +23,12 @@
 
           <%= link_to 'Volunteer', new_volunteer_path, class: 'dropdown-item' %>
 
-          <%= link_to 'Seminar', seminarsandtrainings_path, class: 'dropdown-item' %>
-
-          <%= link_to 'Training', seminarsandtrainings_path, class: 'dropdown-item' %>
+          <%= link_to 'Seminar and Training', new_request_path, class: 'dropdown-item' %>
 
           <%= link_to 'Membership', seminarsandtrainings_path, class: 'dropdown-item' %>
 
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Log In</a>
+          <%= link_to 'LACAG', root_path, class: 'dropdown-item' %>
         </div>
       </li>
 

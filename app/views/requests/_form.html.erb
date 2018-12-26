@@ -1,0 +1,46 @@
+<%= form_for @request do |f| %>
+
+
+<div class="text-center user_form text-white">
+  <br>
+  <p> 
+    <%= f.label :first_name, 'FIRST NAME' %> <br>
+    <%= f.text_field :first_name, size: 50 %>
+  </p>
+
+  <p>
+    <%= f.label :last_name, 'LAST NAME' %> <br>
+    <%= f.text_field :last_name, size: 50 %>
+  </p>
+
+  <p>
+    <%= f.label :email, 'EMAIL ADDRESS' %> <br>
+    <%= f.text_field :email, size: 50 %>
+  </p>
+
+  <p>
+    <%= f.label :cp_number, 'CELLPHONE NUMBER' %> <br>
+    <%= f.text_field :cp_number, size: 50 %>
+  </p>
+
+  <p>
+    <%= f.label :location, 'LOCATION' %> <br>
+    <%= f.text_field :location, size: 50 %>
+  </p>
+  
+  <% if current_user %>
+
+  <p>
+    <%= f.check_box :sent %> 
+    <%= f.label :sent, 'EMAIL SENT' %>
+  </p>
+
+  <% end %>
+
+  <p>
+    <%= f.submit 'Register', class: 'btn' %>
+  </p>
+
+</div>
+
+<% end %>

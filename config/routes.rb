@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/seminarsandtrainings', to: "pages#seminarsandtrainings"
   get '/secret', to: "pages#secret"
 
+  #Request for Seminar and Training
+  resources 'requests'
+
   # Root
   root 'pages#home'
 
