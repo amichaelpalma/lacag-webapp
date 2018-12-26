@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/about', to: "pages#about"
   get '/seminarsandtrainings', to: "pages#seminarsandtrainings"
   get '/secret', to: "pages#secret"
+  get '/donate', to: "pages#donate"
 
   #Request for Seminar and Training
   resources 'requests'

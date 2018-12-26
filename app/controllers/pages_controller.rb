@@ -18,5 +18,8 @@ class PagesController < ApplicationController
   def secret
   end
 
+  def donate
+  end
+
 
 end
