@@ -1,3 +1,5 @@
+<% if current_user %>
+
 <h1>All Available Volunteers</h1>
 
 <table class="table-responsive">
@@ -33,3 +35,31 @@
     <% end %>
   </table>
 </table>
+
+<% else %>
+
+<h1>Our Volunteers</h1>
+
+<table class="table-responsive">
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+
+      </tr>
+    </thead>
+    <% @volunteers.each do |volunteer| %>
+    <tbody>
+      <tr>
+        <th scope="row"><%= volunteer.first_name.first %>. <%= volunteer.last_name %></th>
+        <td><%= volunteer.location %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</table>
+
+
+<% end %>

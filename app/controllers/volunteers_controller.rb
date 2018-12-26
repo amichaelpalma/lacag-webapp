@@ -1,6 +1,6 @@
 class VolunteersController < ApplicationController
 
-  before_action :authorize, only: [:edit, :destroy, :index, :show]
+  before_action :authorize, only: [:edit, :destroy, :show]
 
   before_action :set_volunteer, only: [:edit, :update, :show, :destroy]
 
