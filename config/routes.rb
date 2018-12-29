@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   # Pages
   get '/about', to: "pages#about"
   get '/seminarsandtrainings', to: "pages#seminarsandtrainings"
+<<<<<<< HEAD
   get '/secret', to: "pages#secret"
   get '/donate', to: "pages#donate"
+=======
+
+>>>>>>> 8-add-list-for-seminarsandtrainings-request
 
   #Request for Seminar and Training
   resources 'requests'
