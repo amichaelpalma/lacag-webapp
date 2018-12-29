@@ -48,8 +48,16 @@ ActiveRecord::Schema.define(version: 2018_12_26_115526) do
   create_table "pages", force: :cascade do |t|
   end
 
-# Could not dump table "requests" because of following StandardError
-#   Unknown type 'bolean' for column 'sent'
+  create_table "requests", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "cp_number"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "sent"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
