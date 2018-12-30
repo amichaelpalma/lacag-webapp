@@ -28,13 +28,13 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item">
-                  <%= image_tag 'LACAG Logo.png', class: 'd-block w-100 carimg' %>
+                  <%= image_tag 'LACAG Logo.png', class: 'd-block w-100 carimg img-fluid' %>
                 </div>
                 <div class="carousel-item">
-                  <%= image_tag 'LACAG ECF-IG Division.jpg', class: 'd-block w-100 carimg' %>
+                  <%= image_tag 'LACAG ECF-IG Division.jpg', class: 'd-block w-100 carimg img-fluid' %>
                 </div>
                 <div class="carousel-item active">
-                  <%= image_tag 'LACAGTarp.jpg', class: 'd-block w-100 carimg' %>
+                  <%= image_tag 'LACAGTarp.jpg', class: 'd-block w-100 carimg img-fluid' %>
                 </div>
 
               </div>
@@ -80,7 +80,7 @@
           <p>
           <strong class="small">Images</strong> <br>
           <% event.event_images.each do |image| %>
-          <%= image_tag image.variant(resize: '35x35!'), class: 'img-thumbnail' %>
+          <%= image_tag image.variant(resize: '35x35!'), class: 'img-thumbnail img-fluid' %>
           <% end %>
           </p>
           <% end %>
@@ -127,7 +127,7 @@
                     </div>
                       <div class="card-body">
                         <% if donation.item_photo.attached? %>
-                        <p class="text-center"> <%= image_tag donation.item_photo.variant(resize: '200x150!'), class: 'img-responsive' %> </p>
+                        <p class="text-center"> <%= image_tag donation.item_photo.variant(resize: '200x150!'), class: 'img-responsive img-fluid' %> </p>
                         <% else %>
                         <p class="nophoto text-center" style="height: 150px;">No Photo Attached</p>
                         <% end %>

@@ -9,7 +9,7 @@
   <p class="text-center px-2">
     <strong>Images</strong> <br>
     <% @event.event_images.each do |image| %>
-      <%= image_tag image.variant(resize: '200x200!'), class: 'img-thumbnail' %>
+      <%= image_tag image.variant(resize: '200x200!'), class: 'img-thumbnail img-fluid' %>
     <% end %>
   </p>
   <% end %>
