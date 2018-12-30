@@ -5,21 +5,23 @@
   <br>
   <p>
     <%= f.label :item_name, 'Item Name' %> <br>
-    <%= f.text_field :item_name, style: 'width: 50%;' %>
+    <%= f.text_field :item_name, size: 50 %>
   </p>
 
   <p>
     <%= f.label :item_photo, 'Item Photo' %> <br>
-    <%= f.file_field :item_photo %>
+    <%= f.file_field :item_photo, size: 50 %>
   </p>
 
   <p>
     <%= f.label :item_description, 'Item Description' %> <br>
-    <%= f.text_area :item_description, style: 'width: 50%; height: 200px' %>
+    <%= f.text_area :item_description, style: 'width: 75%; height: 200px' %>
   </p>
 
   <p>
-    <%= f.submit :Submit %>
+    <%= f.submit :Submit, class: 'btn btn-light' %>
+    <%= link_to 'Delete Attachments', @donation.item_photo.purge, data: { confirm: 'Are you sure?'}, class: 'btn btn-light' %>
+
   </p>
 
 
