@@ -41,7 +41,7 @@
 
       <% if current_user %>
       <%= link_to 'Log Out', logout_path, method: :delete, class: 'nav-link btn btn-outline-light my-2 my-sm-0 ml-2' %>
-       <%= link_to 'Update', [:edit, current_user], class: 'nav-link btn btn-outline-light my-2 my-sm-0 ml-2' %> 
+       <%= link_to 'Update', edit_user_path(current_user), class: 'nav-link btn btn-outline-light my-2 my-sm-0 ml-2' %> 
       <% end %>
 
       <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" 
